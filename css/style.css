@@ -1,0 +1,131 @@
+/* My Official Mart - responsive theme layer */
+:root {
+  color-scheme: light;
+}
+html.dark {
+  color-scheme: dark;
+}
+html,
+body {
+  transition:
+    background-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.theme-toggle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem;
+  min-height: 40px;
+  padding: 0.45rem 0.7rem;
+  border: 1px solid #cbd5e1;
+  border-radius: 999px;
+  background: #fff;
+  color: #0f172a;
+  font-size: 0.78rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+.theme-toggle:hover {
+  border-color: #0f766e;
+  transform: translateY(-1px);
+}
+.theme-toggle #theme-icon {
+  font-size: 1rem;
+}
+
+html.dark body {
+  background: #0b1220 !important;
+  color: #e5e7eb !important;
+}
+html.dark .bg-white {
+  background-color: #111827 !important;
+}
+html.dark .bg-slate-50 {
+  background-color: #0b1220 !important;
+}
+html.dark .bg-slate-100 {
+  background-color: #111827 !important;
+}
+html.dark .bg-slate-200 {
+  background-color: #1f2937 !important;
+}
+html.dark .text-slate-900 {
+  color: #f8fafc !important;
+}
+html.dark .text-slate-800 {
+  color: #e5e7eb !important;
+}
+html.dark .text-slate-700 {
+  color: #d1d5db !important;
+}
+html.dark .text-slate-600 {
+  color: #cbd5e1 !important;
+}
+html.dark .text-slate-500 {
+  color: #94a3b8 !important;
+}
+html.dark .text-slate-400 {
+  color: #94a3b8 !important;
+}
+html.dark .border-slate-200,
+html.dark .border-slate-300 {
+  border-color: #334155 !important;
+}
+html.dark .divide-slate-200 > :not([hidden]) ~ :not([hidden]) {
+  border-color: #334155 !important;
+}
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #1f2937 !important;
+}
+html.dark input,
+html.dark select,
+html.dark textarea {
+  background: #111827 !important;
+  color: #f8fafc !important;
+  border-color: #334155 !important;
+}
+html.dark input::placeholder,
+html.dark textarea::placeholder {
+  color: #64748b !important;
+}
+html.dark header {
+  background: #111827 !important;
+  border-color: #334155 !important;
+}
+html.dark .theme-toggle {
+  background: #111827;
+  color: #f8fafc;
+  border-color: #475569;
+}
+html.dark footer {
+  background: #020617 !important;
+  border-color: #1e293b !important;
+}
+html.dark .shadow-sm {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.24) !important;
+}
+
+@media (max-width: 700px) {
+  .theme-toggle .theme-label {
+    display: none;
+  }
+  .theme-toggle {
+    width: 40px;
+    padding: 0.4rem;
+  }
+}
+
+@media (max-width: 520px) {
+  nav {
+    gap: 0.55rem !important;
+  }
+  nav a span:not([id]) {
+    display: none;
+  }
+  header .container {
+    min-height: 64px;
+  }
+}
